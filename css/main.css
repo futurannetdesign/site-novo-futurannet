@@ -1,0 +1,160 @@
+.main {
+  width: 100%;
+  position: relative;
+}
+.main-info {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+.main-descricao {
+  width: 100%;
+  width: 50%;
+  margin: 24rem 0;
+}
+.main-descricao h1 {
+  color: #222222;
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  margin-top: 2rem;
+}
+.main-descricao p {
+  color: #5e6576;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-top: 2rem;
+}
+.main-descricao-saudacao {
+  color: #ff5574;
+  background-color: #FFE7EB;
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0.4rem 2rem;
+  line-height: 2.6rem;
+  margin-bottom: 2rem;
+}
+.main-btn button {
+  color: #fff;
+  background-color: #FF5574;
+  border-radius: 10rem;
+  border: none;
+  margin: 2rem 0;
+  padding: 1.2rem 4rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main-btn button:hover {
+  color: #FF5574;
+  background-color: #fff;
+  outline:0.1rem solid #FF5574;
+}
+.main-btn i {
+  font-size: 1.8rem;
+  margin: 0 1rem;
+}
+.main-btn a {
+  color:  #222222;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  text-decoration: underline;
+}
+.main-img img {
+  display: block;
+  margin-top: 0.4rem;
+  width: 100%;
+  width: 48rem;
+}
+/*Media Query*/
+@media (max-width:1024px) {
+  .main-info {
+    display: flex;
+    justify-content: space-around;
+  }
+  .main-descricao h1 {
+    font-size: 4rem;
+  }
+  .main-descricao p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+  .main-img img {
+    width: 40rem;
+  }
+}
+@media (max-width:768px) {
+  .main-info {
+    display: flex;
+    justify-content: space-around;
+  }
+  .main-descricao h1 {
+    font-size: 3.4rem;
+    line-height: 5rem;
+    margin-left: 1rem;
+  }
+  .main-descricao p {
+    font-size: 1.2rem;
+    margin: 1rem 1rem 0;
+  }
+  .main-descricao-saudacao {
+    margin: 0 1rem;
+  }
+  .main-btn button {
+    margin: 2rem 1rem;
+    padding: 1rem 3rem;
+  }
+  .main-img img {
+    width: 30rem;
+    margin-right: 1rem;
+  }
+}
+@media (max-width:425px) {
+  .main {
+    margin-top: -4rem;
+  }
+  .main-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-descricao {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-descricao h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .main-descricao p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+  .main-btn button {
+    font-size: 1rem;
+    margin: 2rem 0;
+    padding: 0.4rem 2rem;
+  }
+  .main-btn i {
+    font-size: 1.1rem;
+    margin: 0 1rem;
+  }
+  .main-btn a {
+    font-size: 1.1rem;
+    margin-left: -1rem;
+  }
+  .main-img img {
+    display: block;
+    margin: auto;
+    margin-top: -16rem;
+    width: 30rem;
+  }
+}
+

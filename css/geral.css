@@ -1,0 +1,66 @@
+@import"./header.css";
+@import"./main.css";
+@import"./section-cards.css";
+@import"./section-info-pri.css";
+@import"./section-info-sec.css";
+@import"./section-projetos.css";
+@import"./section-pacotes.css";
+@import"./section-nota.css";
+@import"./section-form.css";
+@import"./footer.css";
+@import"./sucesso.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+:root {
+  font-size: 62.5%;
+  --background-light:#808080;
+  --background:#f9f9f9;
+  --buttons-primary:#FF0000;
+  --buttons-primary_:#ff5574;
+  --buttons-secundary:#0000FF;
+  --buttons-hover:#6168ff;
+  --text-primary:#000;
+  --text-secundary:#222222;
+  --text-dark:#808080;
+  --text-body:#5e6576;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 2s;
+}
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+}

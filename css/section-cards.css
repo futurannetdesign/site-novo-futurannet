@@ -1,0 +1,89 @@
+.section-cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 14rem;
+}
+.section-card {
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  width: 100%;
+  width: 29.6rem;
+  height: 40rem;
+  transition: 0.3s;
+}
+.section-card:hover {
+  transform: scale(0.9);
+}
+.section-card-img img {
+  width: 6rem;
+  position: relative;
+  z-index: 1;
+  margin: 2rem 2rem;
+}
+.section-card-img i {
+  color: #fff;
+  font-size: 1.8rem;
+  position: absolute;
+  z-index: 1;
+  margin-left: -6.4rem;
+  margin-top: 4rem;
+}
+.section-card-info span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2rem ;
+}
+.section-card-info p {
+  color: #5e6576;
+  font-size: 1.4rem;
+  font-weight: 4;
+  margin: 1rem 2rem ;
+}
+.section-card-lista {
+  color: #5e6576;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 1rem 1.8rem ;
+}
+.section-card-lista i {
+  font-size:1.6rem;
+}
+.section-card-lista ul li{
+  padding: 0.6rem 0;
+}
+/*Media Query*/
+@media (max-width:1024px) {
+  .section-cards {
+    justify-content: space-around;
+  }
+}
+@media (max-width:768px) {
+  .section-card {
+    width: 24rem;
+    height: 36rem;
+  }
+  .section-card-info span {
+    font-size: 1.4rem;
+  }
+  .section-card-info p {
+    font-size: 1.2rem;
+  }
+  .section-card-lista {
+    font-size: 1.2rem;
+  }
+  .section-card-lista ul li{
+    padding: 0.2rem 0;
+  }
+}
+@media (max-width:425px) {
+  .section-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10rem;
+    
+  }
+  .section-card {
+    margin: 1rem 0;
+  }
+}

@@ -51,4 +51,19 @@ ErrorDocument 404 /404.html
 
 <IfModule mod_headers.c>
   Header append Vary Accept env=REDIRECT_accept
-</IfModule> 
+</IfModule>
+
+# Adicionar ao .htaccess existente
+# Redirecionar www para non-www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Compressão para fontes
+AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+# Cache para fontes
+ExpiresByType application/x-font-ttf "access plus 1 year"
+ExpiresByType application/x-font-opentype "access plus 1 year"
+ExpiresByType application/font-woff "access plus 1 year"
+ExpiresByType application/font-woff2 "access plus 1 year" 

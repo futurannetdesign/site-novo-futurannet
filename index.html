@@ -159,6 +159,9 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-SEU_ID_AQUI"
     ></script>
     <script>
+      // Desabilitar Analytics até o consentimento
+      window["ga-disable-G-SEU_ID_AQUI"] = true;
+
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -582,10 +585,26 @@
     </footer>
     <!--Fim-Footer-->
 
+    <!--Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+      <p>
+        Este site usa cookies para melhorar sua experiência. Ao continuar
+        navegando, você concorda com nossa
+        <a href="privacidade.html" style="color: var(--buttons-primary)"
+          >Política de Privacidade</a
+        >.
+      </p>
+      <div class="buttons">
+        <button class="accept" onclick="acceptCookies()">Aceitar</button>
+        <button class="decline" onclick="declineCookies()">Recusar</button>
+      </div>
+    </div>
+
     <!--JavaScript-->
     <script src="js/script.js"></script>
     <script>
       checkLinks();
     </script>
+    <script src="js/cookies.js"></script>
   </body>
 </html>

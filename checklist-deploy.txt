@@ -1,0 +1,23 @@
+1. Arquivos e Pastas
+☐ Verificar estrutura de pastas
+☐ Confirmar nomes dos arquivos em minúsculo
+☐ Remover arquivos desnecessários
+☐ Verificar permissões (644 para arquivos, 755 para pastas)
+
+2. Links e Caminhos
+☐ Atualizar URLs absolutas
+☐ Verificar caminhos das imagens
+☐ Confirmar links internos
+☐ Testar links externos
+
+3. Configurações
+☐ Atualizar ID do Google Analytics
+☐ Configurar domínio no FormSubmit
+☐ Verificar emails de contato
+☐ Configurar SSL/HTTPS
+
+4. Otimizações
+☐ Minificar CSS/JS finais
+☐ Comprimir imagens
+☐ Verificar cache
+☐ Testar performance 

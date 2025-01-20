@@ -1,39 +1,40 @@
-@import"./header.css";
-@import"./main.css";
-@import"./section-cards.css";
-@import"./section-info-pri.css";
-@import"./section-info-sec.css";
-@import"./section-projetos.css";
-@import"./section-pacotes.css";
-@import"./section-nota.css";
-@import"./section-form.css";
-@import"./footer.css";
-@import"./sucesso.css";
+@import "./header.css";
+@import "./main.css";
+@import "./section-cards.css";
+@import "./section-info-pri.css";
+@import "./section-info-sec.css";
+@import "./section-projetos.css";
+@import "./section-pacotes.css";
+@import "./section-nota.css";
+@import "./section-form.css";
+@import "./footer.css";
+@import "./sucesso.css";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 :root {
   font-size: 62.5%;
-  --background-light:#808080;
-  --background:#f9f9f9;
-  --buttons-primary:#FF0000;
-  --buttons-primary_:#ff5574;
-  --buttons-secundary:#0000FF;
-  --buttons-hover:#6168ff;
-  --text-primary:#000;
-  --text-secundary:#222222;
-  --text-dark:#808080;
-  --text-body:#5e6576;
+  --background-light: #808080;
+  --background: #f9f9f9;
+  --buttons-primary: #ff0000;
+  --buttons-primary_: #ff5574;
+  --buttons-secundary: #0000ff;
+  --buttons-hover: #6168ff;
+  --text-primary: #000;
+  --text-secundary: #222222;
+  --text-dark: #808080;
+  --text-body: #5e6576;
 }
 html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -63,4 +64,101 @@ ul {
   width: 100%;
   max-width: 1180px;
   margin: auto;
+}
+
+/* Classes para SEO e Acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Melhorar contraste para acessibilidade */
+a:focus,
+button:focus {
+  outline: 2px solid var(--buttons-primary);
+  outline-offset: 2px;
+}
+
+/* Otimização para leitores de tela */
+[aria-hidden="true"] {
+  display: none;
+}
+
+/* Melhorar visibilidade do texto */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Otimização para carregamento de imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  loading: "lazy";
+}
+
+/* Seção Projetos */
+.section-projetos {
+  padding: 6rem 0;
+}
+
+.section-projetos h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-projetos-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.section-projetos-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  aspect-ratio: 16/9;
+}
+
+.section-projetos-card:hover {
+  transform: translateY(-5px);
+}
+
+.section-projetos-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.section-projetos-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .section-projetos {
+    padding: 4rem 0;
+  }
+
+  .section-projetos-cards {
+    grid-template-columns: 1fr;
+  }
 }

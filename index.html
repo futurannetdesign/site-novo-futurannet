@@ -439,12 +439,11 @@
       <p><i class="bi bi-telephone-fill"></i> 98 9 8867 - 0641</p>
     </div>
 
-    <form action="https://formspree.io/f/mwvrvakb" method="POST">
+    <form id="contact-form" action="https://formspree.io/f/mwvrvakb" method="POST">
       <!-- Honeypot Field -->
       <input type="text" name="url" style="display:none;" tabindex="-1" autocomplete="off">
-      
+
       <!-- Formspree Configuration -->
-      <input type="hidden" name="_next" value="https://site-novo-futurannet.vercel.app/sucesso.html" />
       <input type="hidden" name="_subject" value="Nova solicitação de contato - Futurannet Design" />
       <input type="hidden" name="_captcha" value="false" />
 
@@ -454,7 +453,8 @@
       </div>
       <div>
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="joao@exemplo.com.br" aria-label="Seu endereço de email" required />
+        <input type="email" id="email" name="email" placeholder="joao@exemplo.com.br" aria-label="Seu endereço de email"
+          required />
       </div>
       <div>
         <label for="phone">WhatsApp (opcional)</label>
@@ -462,7 +462,8 @@
       </div>
       <div>
         <label for="message">Mensagem *</label>
-        <textarea id="message" name="message" placeholder="Descreva seu projeto..." aria-label="Descreva seu projeto em detalhes" rows="5" required></textarea>
+        <textarea id="message" name="message" placeholder="Descreva seu projeto..."
+          aria-label="Descreva seu projeto em detalhes" rows="5" required></textarea>
       </div>
       <div class="checkbox-field">
         <label>
@@ -475,6 +476,43 @@
         <button type="submit">Enviar sua mensagem</button>
       </div>
     </form>
+
+    <!-- Script para redirecionar após sucesso do formulário -->
+    <script>
+      const form = document.getElementById('contact-form');
+      
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const formData = new FormData(form);
+          
+          fetch('https://formspree.io/f/mwvrvakb', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              // Redireciona para página de sucesso após 1 segundo
+              setTimeout(function() {
+                window.location.replace('sucesso.html');
+              }, 1000);
+            } else {
+              alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+              form.reset();
+            }
+          })
+          .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+            form.reset();
+          });
+        });
+      }
+    </script>
   </section>
   <!--Fim-Section-Formulario-->
 

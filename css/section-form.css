@@ -174,3 +174,41 @@ textarea {
     margin: auto;
   }
 }
+
+/* WhatsApp Button Styles */
+.whatsapp-button {
+  display: inline-block;
+  width: 96%;
+  height: 3.80rem;
+  border: 2px solid #25d366;
+  border-radius: 30px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.whatsapp-button:hover {
+  border: 2px solid #25d366;
+  background-color: #fff;
+  color: #25d366;
+}
+
+.whatsapp-button i {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-button {
+    font-size: 1.2rem;
+    height: 3.3rem;
+  }
+}

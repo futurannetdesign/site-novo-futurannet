@@ -426,8 +426,8 @@
   <!--inicio-Section-Formulario-->
   <section class="section-formulario container" id="formulario">
     <h2>
-      Utilize o seguinte formulário para<br /><strong>
-        solicitar um orçamento para o seu projeto.</strong>
+      Entre em contato conosco<br /><strong>
+        via WhatsApp para solicitar um orçamento. Rápido e prático!</strong>
     </h2>
     <p>Nosso endereço, contato e E-mail</p>
     <div class="section-formulario-endereco">
@@ -439,69 +439,16 @@
       <p><i class="bi bi-telephone-fill"></i> 98 9 8867 - 0641</p>
     </div>
 
-    <form id="contact-form" action="https://formspree.io/f/mwvrvakb" method="POST">
-      <!-- Honeypot Field -->
-      <input type="text" name="url" style="display:none;" tabindex="-1" autocomplete="off">
-
-      <!-- Formspree Configuration -->
-      <input type="hidden" name="_subject" value="Nova solicitação de contato - Futurannet Design" />
-      <input type="hidden" name="_captcha" value="false" />
-
-      <div>
-        <label for="name">Seu Nome *</label>
-        <input type="text" id="name" name="name" placeholder="João Silva" aria-label="Seu nome completo" required />
-      </div>
-      <div>
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="joao@exemplo.com.br" aria-label="Seu endereço de email"
-          required />
-      </div>
-      <div>
-        <label for="phone">WhatsApp (opcional)</label>
-        <input type="tel" id="phone" name="phone" placeholder="(98) 98867-0641" aria-label="Seu número de WhatsApp" />
-      </div>
-      <div>
-        <label for="message">Mensagem *</label>
-        <textarea id="message" name="message" placeholder="Descreva seu projeto..."
-          aria-label="Descreva seu projeto em detalhes" rows="5" required></textarea>
-      </div>
-      <div class="checkbox-field">
-        <label>
-          <input type="checkbox" name="lgpd-consent" required>
-          Eu aceito a <a href="privacidade.html" target="_blank">Política de Privacidade</a>
-          e os <a href="termos.html" target="_blank">Termos de Uso</a> *
-        </label>
-      </div>
-      <div class="btn">
-        <button type="submit" id="submit-btn">Enviar sua mensagem</button>
-      </div>
-    </form>
-
-    <!-- Script para redirecionar imediatamente ao enviar -->
-    <script>
-      const form = document.getElementById('contact-form');
-      const submitBtn = document.getElementById('submit-btn');
-
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Enviando...';
-
-          // Envia os dados via Formspree em background
-          const formData = new FormData(form);
-
-          // Envia sem esperar resposta (fire and forget)
-          navigator.sendBeacon('https://formspree.io/f/mwvrvakb', new URLSearchParams(formData));
-
-          // Redireciona imediatamente
-          setTimeout(function () {
-            window.location.replace('/sucesso.html');
-          }, 800);
-        });
-      }
-    </script>
+    <!-- Botão WhatsApp -->
+    <div class="btn">
+      <a href="https://wa.me/5598988670641?text=Olá%20Futurannet%20Design!%20Estou%20interessado%20em%20conhecer%20seus%20serviços%20de%20criação%20de%20sites.%20Pode%20me%20fazer%20um%20orçamento?" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="whatsapp-button"
+         aria-label="Abrir WhatsApp para contato">
+        <i class="bi bi-whatsapp"></i> Fale conosco no WhatsApp
+      </a>
+    </div>
   </section>
   <!--Fim-Section-Formulario-->
 

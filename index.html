@@ -439,7 +439,7 @@
       <p><i class="bi bi-telephone-fill"></i> 98 9 8867 - 0641</p>
     </div>
 
-    <form id="contact-form" action="https://formspree.io/f/mwvrvakb" method="POST">
+    <form id="contact-form" action="https://formspree.io/f/mwvrvakb" method="POST" target="hidden-form">
       <!-- Honeypot Field -->
       <input type="text" name="url" style="display:none;" tabindex="-1" autocomplete="off">
 
@@ -473,45 +473,35 @@
         </label>
       </div>
       <div class="btn">
-        <button type="submit">Enviar sua mensagem</button>
+        <button type="submit" id="submit-btn">Enviar sua mensagem</button>
       </div>
     </form>
 
-    <!-- Script para redirecionar após sucesso do formulário -->
+    <!-- iFrame Hidden para enviar dados sem carregar página -->
+    <iframe id="hidden-form" name="hidden-form" style="display:none;"></iframe>
+
+    <!-- Script para redirecionar imediatamente após submissão -->
     <script>
       const form = document.getElementById('contact-form');
-      
+      const submitBtn = document.getElementById('submit-btn');
+
       if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          const formData = new FormData(form);
-          
-          fetch('https://formspree.io/f/mwvrvakb', {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
-          })
-          .then(response => {
-            if (response.ok) {
-              // Redireciona para página de sucesso após 1 segundo
-              setTimeout(function() {
-                window.location.replace('sucesso.html');
-              }, 1000);
-            } else {
-              alert('Erro ao enviar mensagem. Por favor, tente novamente.');
-              form.reset();
-            }
-          })
-          .catch(error => {
-            console.error('Erro:', error);
-            alert('Erro ao enviar mensagem. Por favor, tente novamente.');
-            form.reset();
-          });
+        form.addEventListener('submit', function (e) {
+          // Não impede o envio padrão, deixa ir para o iframe
+          // Apenas redireciona imediatamente
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Enviando...';
+
+          setTimeout(function () {
+            window.location.href = 'sucesso.html';
+          }, 500);
         });
       }
+    </script>
+    form.reset();
+    });
+    });
+    }
     </script>
   </section>
   <!--Fim-Section-Formulario-->

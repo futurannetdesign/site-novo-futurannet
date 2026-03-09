@@ -1,0 +1,61 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDE/Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de dependências
+node_modules/
+package-lock.json
+
+# Arquivos de ambiente
+.env
+.env.local
+
+# Arquivos de cache
+.cache/
+dist/ 
+
+## 📂 Estrutura de Arquivos 
+
+## 🔧 Configuração
+
+1. Atualizar ID do Google Analytics em `index.html`
+2. Configurar domínio no FormSubmit
+3. Atualizar informações de contato
+4. Configurar SSL/HTTPS
+
+## 📄 Scripts Disponíveis 
+
+## 🤝 Contribuindo
+
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👤 Autor
+
+**Futurannet Design**
+
+* Website: [futurannet.com](https://futurannet.com)
+* Instagram: [@futurannet](https://instagram.com/futurannet)
+* LinkedIn: [Futurannet Design](https://linkedin.com/company/futurannet)
+
+## 🌟 Agradecimentos
+
+* Bootstrap Icons pela biblioteca de ícones
+* Google Fonts pelas fontes
+* FormSubmit pelo serviço de formulário
+
+---
+⭐️ From [Futurannet](https://github.com/futurannet) 

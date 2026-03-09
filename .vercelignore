@@ -1,0 +1,16 @@
+node_modules/
+.git/
+.gitignore
+*.md
+.env.local
+.env
+ANALISE_MELHORIAS.md
+ROADMAP_PRIORIZADO.md
+EXEMPLOS_CODIGO.md
+README_ANALISE.md
+CHECKLIST_IMPLEMENTACAO.md
+SUMARIO_EXECUTIVO.md
+FIREBASE_vs_VERCEL.md
+backup.sh
+checklist-deploy.txt
+checklist.txt

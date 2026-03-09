@@ -1,0 +1,18 @@
+Navegadores Desktop:
+☐ Chrome (última versão)
+☐ Firefox (última versão)
+☐ Safari (última versão)
+☐ Edge (última versão)
+
+Dispositivos Mobile:
+☐ Chrome Android
+☐ Safari iOS
+☐ Samsung Internet
+
+Testes:
+☐ Layout responsivo
+☐ Formulários
+☐ Animações
+☐ Imagens
+☐ Links
+☐ Performance 

@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /.env
+Disallow: /package.json
+
+# Permitir buscadores importantes
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://futurannet.vercel.app/sitemap.xml
+# Após registrar domain: Sitemap: https://futurannet.com.br/sitemap.xml 
